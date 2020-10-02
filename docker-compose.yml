@@ -27,9 +27,10 @@ services:
       args:
         pull: 1
     ports:
-      - "3000:3000"
+      - "4000:4000"
     volumes:
       - .:/opt/outline
+      - .env.docker:/opt/outline/.env
     depends_on:
       - postgres
       - redis

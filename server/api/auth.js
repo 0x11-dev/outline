@@ -27,6 +27,14 @@ if (process.env.SLACK_KEY) {
   });
 }
 
+if (process.env.AUTH0_KEY) {
+  services.push({
+    id: "auth0",
+    name: "Auth0",
+    authUrl: signin("auth0"),
+  });
+}
+
 services.push({
   id: "email",
   name: "Email",
